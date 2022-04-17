@@ -283,6 +283,7 @@
     </style>
     <script>
       const OpenEmail = () => {
+        console.log('OpenEmail')
         const name = document.getElementById('VName').value;
         const area = document.getElementById('VArea').value;
         const count = document.getElementById('VCount').value;
@@ -293,8 +294,12 @@
         // window.location = "mailto:"+to+"?subject="+subject+"&body="+emailBody;
         const content = 'mailto:' + encodeURIComponent(to) + '?Subject=' + encodeURIComponent(subject) + '&Body=' + encodeURIComponent(bodyText);
 
+
         const content1 = 'mailto:no-one@snai1mai1.com?subject=look at this website&body=Hi,I found this website and thought you might like it http://www.geocities.com/wowhtml/';
 
+        window.open(content, '_blank');
+
+        return;
         var form = document.createElement('form');
 
         //Set the form attributes 
@@ -376,7 +381,7 @@
                 </div>
                 <div class="field padding-bottom--24">
                   <input type="button" onclick="OpenEmail()" value="Continue">
-                  <a href="mailto:someone@yoursite.com">Email Us</a>
+                  <a href="#" id="email-me">Email Us</a>
                 </div>
               </div>
             </div>
