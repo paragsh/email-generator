@@ -6,19 +6,16 @@
     <link href="ccc.css" rel="stylesheet" />
     <script>
       const OpenEmail = () => {
-        const name = document.getElementById('VName').value ? document.getElementById('VName').value : 'am an animal volunteer';
+        const name = document.getElementById('VName').value ? document.getElementById('VName').value : 'an animal volunteer';
         const area = document.getElementById('VArea').value ? document.getElementById('VArea').value : 'Pune';
         const count = document.getElementById('VCount').value ? document.getElementById('VCount').value : '1';
         const bodyText = "Hello, \n" +
-                "I " + name + " from " + area + " have sterilised " + count + " dogs at Canine Control and Care (CCC), Pune. We have seen and are aware of the hard work, commitment, and professionalism of the entire CCC Team in these years. \n" +
-                "They have always followed AWBI guidelines while  catching, operating, post-caring, and releasing. We never faced any issue with them.\n" +
+                "I am " + name + " from " + area + " and have sterilised " + count + " dogs at Canine Control and Care (CCC), Pune. We have seen and are aware of the hard work, commitment, and professionalism of the entire CCC Team in these years. \n" +
+                "They have always followed AWBI guidelines while catching, operating, post-caring, and releasing. We never faced any issue with them.\n" +
                 "We support Canine Control and Care (CCC), Pune\n" +
                 "\n" +
                 "Regards,\n" +
                 " " + name ;
-
-
-
 
 
 
@@ -28,8 +25,6 @@
         const content = 'mailto:' + encodeURIComponent(to) + '?Subject=' + encodeURIComponent(subject) + '&Body=' + encodeURIComponent(bodyText)+ '&cc=' + cc;
 
         window.open(content, '_blank');
-
-        return;
       }
 
     </script>
@@ -77,29 +72,29 @@
           <div class="formbg-outer">
             <div class="formbg">
               <div class="formbg-inner padding-horizontal--48">
-                <h3 style="color: #697386; margin-bottom: 20px; border-bottom: #1a1f36 solid 2px"> * Form to help generate email content *</h3>
+                <h4 style="color: #697386;border-bottom: #1a1f36 solid 2px" class="field margin-bottom--24"> Form to help generate support email for CCC</h4>
 
-                <div class="field padding-bottom--24">
+                <div class="field padding-bottom--24 padding-top--48">
                   <label>Your Name</label>
                   <input id="VName">
                 </div>
-                <div class="field padding-bottom--24">
+                <div class="field padding-bottom--24 padding-top--48">
                   <label>How many dogs have you sterilized at CCC?</label>
                   <input id="VCount">
                 </div>
-                <div class="field padding-bottom--24">
+                <div class="field padding-bottom--24 padding-top--48">
                     <label>Sterilized from which Area</label>
                   <input id="VArea" placeholder="Enter your area (e.g Aundh, Wakad)">
                 </div>
                 <div class="field field-checkbox padding-bottom--24 flex-flex align-center">
                 </div>
-                <div class="field padding-bottom--24">
-                  <input type="button" onclick="OpenEmail()" value="Draft Email">
+                <div class="field padding-bottom--24 padding-top--48">
+                  <input type="button" onclick="OpenEmail()" style="font-size: x-large" value="Draft Support Email">
                 </div>
-                <span style="font-size: small ">** <b>Note</b>: Email is generated using above data. Volunteer can edit the email content however they want.</span>
+                <span style="font-size: small" class="padding-top--48"><b>Note</b>: Email is generated using the above-entered data to e-mail government officials. You can edit the email content and express your support in your own words too.</span>
               </div>
             </div>
-            <div class="footer-link padding-top--24">
+            <div class="footer-link padding-top--48">
               <div class="listing padding-top--24 padding-bottom--24 flex-flex center-center">
                 <span><b>Page created by Pawthon team</b></span>
                 <img src="pawthon-logo.jpeg" width="100" height="100"/>
