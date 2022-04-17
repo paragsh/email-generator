@@ -283,39 +283,30 @@
     </style>
     <script>
       const OpenEmail = () => {
-        console.log('OpenEmail')
-        const name = document.getElementById('VName').value;
-        const area = document.getElementById('VArea').value;
-        const count = document.getElementById('VCount').value;
-        const bodyText = "Sample body" + count + ' count ' + area + 'area' + name + '';
-        const to = 'parag.shinde@mindbodyonline.com;test@test.com';
+        const name = document.getElementById('VName').value ?? 'am an animal volunteer';
+        const area = document.getElementById('VArea').value ?? 'Pune';
+        const count = document.getElementById('VCount').value ?? '1';
+        const bodyText = "Hello," +
+                "I " + name + "from " + area + "have sterilised " + count + " dogs at Canine Control and Care (CCC), Pune. We have seen and are aware of the hard work, commitment, and professionalism of the entire CCC Team in these years. " +
+                "They have always followed AWBI guidelines while  catching, operating, post-caring, and releasing. We never faced any issue with them." +
+                "We support Canine Control and Care (CCC), Pune" +
+                "" +
+                "Regards," +
+                " " + name ;
+
+
+
+
+
+
+        const to = 'veterinary@pcmcindia.gov.in;ngdnilesh@gmail.com;pmcmco@gmail.com;health@punecorporation.org;veterinary@punecorporation.org;ravindra.binwade@punecorporation.org;vikramkumar@punecorporation.org;gandhim@nic.in';
         const subject = "We support CCC  - I am from " + area;
-        const cc = "cc@cc.com"
-        // window.location = "mailto:"+to+"?subject="+subject+"&body="+emailBody;
-        const content = 'mailto:' + encodeURIComponent(to) + '?Subject=' + encodeURIComponent(subject) + '&Body=' + encodeURIComponent(bodyText);
-
-
-        const content1 = 'mailto:no-one@snai1mai1.com?subject=look at this website&body=Hi,I found this website and thought you might like it http://www.geocities.com/wowhtml/';
+        const cc = "caninecontrolandcare@gmail.com"
+        const content = 'mailto:' + encodeURIComponent(to) + '?Subject=' + encodeURIComponent(subject) + '&Body=' + (bodyText)+ '&cc=' + cc;
 
         window.open(content, '_blank');
 
         return;
-        var form = document.createElement('form');
-
-        //Set the form attributes 
-        form.setAttribute('method', 'post');
-        form.setAttribute('enctype', 'text/plain');
-        form.setAttribute('action', content1);
-        form.setAttribute('style', 'display:none');
-
-        //Append the form to the body
-        document.body.appendChild(form);
-
-        //Submit the form
-        form.submit();
-
-        //Clean up
-        document.body.removeChild(form);
       }
 
     </script>
@@ -364,24 +355,21 @@
             <div class="formbg">
               <div class="formbg-inner padding-horizontal--48">
                 <div class="field padding-bottom--24">
-                  <label>Name</label>
+                  <label>Your Name</label>
                   <input id="VName">
                 </div>
                 <div class="field padding-bottom--24">
-                  <label>Count</label>
+                  <label>How many dogs have you sterilized at CCC?</label>
                   <input id="VCount">
                 </div>
                 <div class="field padding-bottom--24">
-                  <div class="grid--50-50">
-                    <label>Area</label>
-                  </div>
-                  <input id="VArea">
+                    <label>Sterilized from which Area</label>
+                  <input id="VArea" placeholder="Enter your area (e.g Aundh, Wakad)">
                 </div>
                 <div class="field field-checkbox padding-bottom--24 flex-flex align-center">
                 </div>
                 <div class="field padding-bottom--24">
                   <input type="button" onclick="OpenEmail()" value="Continue">
-                  <a href="#" id="email-me">Email Us</a>
                 </div>
               </div>
             </div>
