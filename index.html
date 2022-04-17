@@ -286,12 +286,12 @@
         const name = document.getElementById('VName').value ?? 'am an animal volunteer';
         const area = document.getElementById('VArea').value ?? 'Pune';
         const count = document.getElementById('VCount').value ?? '1';
-        const bodyText = "Hello," +
-                "I " + name + "from " + area + "have sterilised " + count + " dogs at Canine Control and Care (CCC), Pune. We have seen and are aware of the hard work, commitment, and professionalism of the entire CCC Team in these years. " +
-                "They have always followed AWBI guidelines while  catching, operating, post-caring, and releasing. We never faced any issue with them." +
-                "We support Canine Control and Care (CCC), Pune" +
-                "" +
-                "Regards," +
+        const bodyText = "Hello, \n" +
+                "I " + name + "from " + area + "have sterilised " + count + " dogs at Canine Control and Care (CCC), Pune. We have seen and are aware of the hard work, commitment, and professionalism of the entire CCC Team in these years. \n" +
+                "They have always followed AWBI guidelines while  catching, operating, post-caring, and releasing. We never faced any issue with them.\n" +
+                "We support Canine Control and Care (CCC), Pune\n" +
+                "\n" +
+                "Regards,\n" +
                 " " + name ;
 
 
@@ -302,7 +302,7 @@
         const to = 'veterinary@pcmcindia.gov.in;ngdnilesh@gmail.com;pmcmco@gmail.com;health@punecorporation.org;veterinary@punecorporation.org;ravindra.binwade@punecorporation.org;vikramkumar@punecorporation.org;gandhim@nic.in';
         const subject = "We support CCC  - I am from " + area;
         const cc = "caninecontrolandcare@gmail.com"
-        const content = 'mailto:' + encodeURIComponent(to) + '?Subject=' + encodeURIComponent(subject) + '&Body=' + (bodyText)+ '&cc=' + cc;
+        const content = 'mailto:' + encodeURIComponent(to) + '?Subject=' + encodeURIComponent(subject) + '&Body=' + encodeURIComponent(bodyText)+ '&cc=' + cc;
 
         window.open(content, '_blank');
 
